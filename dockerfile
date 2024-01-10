@@ -6,7 +6,9 @@ COPY . .
 
 
 RUN python -m venv venv
-RUN source venv/bin/activate
+RUN cd /path/to/new/venv
+RUN . bin/activate
+RUN python3 some_script.py
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
