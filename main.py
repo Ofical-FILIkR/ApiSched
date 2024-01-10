@@ -13,4 +13,5 @@ for router in all_routers:
 
 
 if __name__ == "__main__":
-    uvicorn.run(app="main:app", reload=True)
+    # run app on the host and port
+    uvicorn.run(app, host="0.0.0.0", port=9876)
