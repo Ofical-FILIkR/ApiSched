@@ -4,7 +4,10 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --upgrade pip 
+
+RUN python -m venv venv
+RUN source venv/bin/activate
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 EXPOSE 8000
