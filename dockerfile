@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . .
 
 
-RUN python -m venv venv
+RUN pyvenv /path/to/new/venv
 RUN cd /path/to/new/venv
 RUN . bin/activate
 RUN python3 some_script.py
