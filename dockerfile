@@ -1,14 +1,14 @@
 FROM python
 
-WORKDIR /app
 
 COPY . .
+WORKDIR .
 
-RUN  python -m venv project
-RUN . project/bin/activate
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+
+RUN python3 -m pip install --user --upgrade pip && \
+    python3 -m pip install -r requirements.txt
 
 EXPOSE 8000
+
 
 CMD ["python", "main.py"]
