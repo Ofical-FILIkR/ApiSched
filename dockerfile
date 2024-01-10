@@ -5,7 +5,7 @@ WORKDIR /app
 COPY . .
 
 RUN  python -m venv project
-RUN source project/bin/activate
+RUN . project/bin/activate
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
